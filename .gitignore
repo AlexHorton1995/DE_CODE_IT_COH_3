@@ -51,3 +51,4 @@ Thumbs.db
 # Visual Studio Files
 *.suo
 *.json
+*.sqlite
