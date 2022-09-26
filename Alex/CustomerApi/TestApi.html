@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+</head>
+  
+<body>
+    <script>
+        function run() {
+      
+            // Creating Our XMLHttpRequest object 
+            var xhr = new XMLHttpRequest();
+      
+            // Making our connection  
+            var url = 'https://jsonplaceholder.typicode.com/todos/1';
+            xhr.open("GET", url, true);
+      
+            // function execute after request is successful 
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            }
+            // Sending our request 
+            xhr.send();
+        }
+        run();
+    </script>
+    <script>
+  
+        function ajaxCall() {
+            $.ajax({
+  
+                // Our sample url to make request 
+                url: 'https://localhost:44354/Customer/GetCustomerByID?custID=2',
+  
+                // Type of Request
+                type: "GET",
+  
+                // Function to call when to
+                // request is ok 
+                success: function (data) {
+                    var x = JSON.stringify(data);
+                    console.log(x);
+                },
+  
+                // Error handling 
+                error: function (error) {
+                    console.log(`Error ${error}`);
+                }
+            });
+        }
+        ajaxCall();
+    </script>
+</body>  
+</html>
