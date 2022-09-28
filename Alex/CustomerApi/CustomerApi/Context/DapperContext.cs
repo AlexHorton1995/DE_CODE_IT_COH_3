@@ -13,7 +13,7 @@ namespace CustomerApi.Context
         {
             _configuration = configuration;
 #if DEBUG
-            _connectionString = _configuration.GetConnectionString("develop");
+            _connectionString = _configuration.GetConnectionString("develop2");
 #else
             _connectionString = _configuration.GetConnectionString("prod");
 #endif
