@@ -76,7 +76,7 @@ namespace IntakeFIleProcessing
             }
         }
 
-        public Boolean CheckFileDependencies(string[] args)
+        public bool CheckFileDependencies(string[] args)
         {
             var wDirectory = @"C:\IntakeFiles";
             var wDirectoryNew = @"C:\IntakeFiles\NewFiles";
@@ -104,6 +104,10 @@ namespace IntakeFIleProcessing
                 if (newFile.Exists)
                 {
                     newFile.CopyTo(wDirectoryOld + @$"\{fileName}_{DateTime.Now.ToString("MMddYYHHmmss")}");
+                }
+                else
+                {
+                    return false;
                 }
 
                 OutFile = newFile;
