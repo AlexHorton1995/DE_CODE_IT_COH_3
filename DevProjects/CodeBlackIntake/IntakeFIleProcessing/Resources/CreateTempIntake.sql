@@ -1,0 +1,27 @@
+CREATE TABLE [#TempCBIntake]
+(
+	[t_member_date] date NOT NULL,
+	[t_first_name] [varchar](30) NOT NULL,
+	[t_last_name] [varchar](30) NOT NULL,
+	[t_email] [varchar](60) NULL,
+	[t_phone] [varchar](15) NULL,
+	[t_address1] [varchar](35) NOT NULL,
+	[t_address2] [varchar](35) NULL,
+	[t_city] [varchar](23) NOT NULL,
+	[t_state] [varchar](35) NOT NULL,
+	[t_zip] [varchar](6) NOT NULL,
+	[t_country] [char](3) DEFAULT('USA') NOT NULL,
+	[t_dob] [date] NOT NULL,
+	[t_self_identify] int DEFAULT(1) NOT NULL,
+	[t_self_description] int DEFAULT(1) NOT NULL,
+	[t_outreach_type] int DEFAULT(1) NOT NULL,
+	[t_occupation] int DEFAULT(1) NOT NULL,		
+	[t_occupation_other] varchar(500) NULL,
+	[t_job_seeking] bit DEFAULT(0) NOT NULL,
+	[t_exp_level] int DEFAULT(1) NOT NULL,		
+	[t_interest_area] int DEFAULT(9) NOT NULL,
+	[t_interest_other] varchar(500) NULL,
+	[t_programming_lang] int DEFAULT(319) NOT NULL,
+	[t_programming_other] varchar(500) NULL,
+	[t_shirt_size] int DEFAULT(1) NOT NULL
+)
